@@ -131,7 +131,7 @@ print(dnn_model)
 
 yes = input()
 if yes == '1':
-    tf.saved_model.save(dnn_model, "save/1")
+    tf.saved_model.save(dnn_model, "save/mymodel")
 
 explainer = shap.KernelExplainer(dnn_model, train_dataset, session='tensorflow')
 shap_values = explainer.shap_values(train_dataset)
